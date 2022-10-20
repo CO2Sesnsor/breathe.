@@ -9,7 +9,6 @@ router.get("/data", async function (req, res, next) {
   console.log(data);
 
   res.send(data);
-  return "hello";
 });
 
 router.post("/data", async function (req, res, next) {

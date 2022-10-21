@@ -1,6 +1,6 @@
 # breathe.
 
-### `Setting up the project`
+## Setting up the project
 
 Initialize git in your directory using: `git init`
 

@@ -14,7 +14,7 @@ router.get("/data", async function (req, res, next) {
 
 router.post("/data", async function (req, res, next) {
   const { data, error } = await supabase.from("data").insert(req.body).select();
-  console.log(req.body);
+  console.log(data);
   if (error) {
     res.send(error);
   } else {

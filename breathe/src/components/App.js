@@ -1,8 +1,9 @@
 import "./App.css";
-import construction from "./assets/construction.svg";
+// import construction from "./assets/construction.svg";
 
 import { useState, useEffect, useRef } from "react";
-import sensorReadingsAPI from "./api/sensorReadings";
+import sensorReadingsAPI from "../api/sensorReadings";
+import Postingcard from "./posting-card";
 
 function App() {
   const [reading, setReading] = useState([]);
@@ -23,13 +24,8 @@ function App() {
 
   return (
     <div className="center">
-      <input type="text" ref={inputRef} />
-      <button
-        className="p-2 rounded-sm bg-black text-white"
-        onClick={addReading}
-      >
-        ADD
-      </button>
+      <Postingcard />
+
       <div>{JSON.stringify(reading)}</div>
       {/* <h1>COMING SOON</h1>
       <div className="scale-construction-img">

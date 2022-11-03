@@ -4,6 +4,7 @@ import "./App.css";
 import { useState, useEffect, useRef } from "react";
 import sensorReadingsAPI from "../api/sensorReadings";
 import Postingcard from "./posting-card";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [reading, setReading] = useState([]);
@@ -24,8 +25,10 @@ function App() {
 
   return (
     <div className="center">
-      <Postingcard />
-      <div>{JSON.stringify(reading)}</div>
+      <Routes>
+        <Route path="/postdata" element={<Postingcard />} />
+        <Route path="/datadump" element=<div>{JSON.stringify(reading)}</div> />
+      </Routes>
     </div>
   );
 }
